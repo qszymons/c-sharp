@@ -34,25 +34,25 @@ namespace WinFormsApp3
             int n1 = mid - jeden + 1;
             int n2 = dwa - mid;
 
-            int[] leftArray = new int[n1];
-            int[] rightArray = new int[n2];
+            int[] Larr = new int[n1]; // Zmieniono nazwę z leftArray na Larr
+            int[] Parr = new int[n2]; // Zmieniono nazwę z rightArray na Parr
 
             for (int i = 0; i < n1; i++)
-                leftArray[i] = array[jeden + i];
+                Larr[i] = array[jeden + i];
             for (int j = 0; j < n2; j++)
-                rightArray[j] = array[mid + 1 + j];
+                Parr[j] = array[mid + 1 + j];
 
             int k = jeden, iIndex = 0, jIndex = 0;
             while (iIndex < n1 && jIndex < n2)
             {
-                if (leftArray[iIndex] <= rightArray[jIndex])
+                if (Larr[iIndex] <= Parr[jIndex])
                 {
-                    array[k] = leftArray[iIndex];
+                    array[k] = Larr[iIndex];
                     iIndex++;
                 }
                 else
                 {
-                    array[k] = rightArray[jIndex];
+                    array[k] = Parr[jIndex];
                     jIndex++;
                 }
                 k++;
@@ -60,14 +60,14 @@ namespace WinFormsApp3
 
             while (iIndex < n1)
             {
-                array[k] = leftArray[iIndex];
+                array[k] = Larr[iIndex];
                 iIndex++;
                 k++;
             }
 
             while (jIndex < n2)
             {
-                array[k] = rightArray[jIndex];
+                array[k] = Parr[jIndex];
                 jIndex++;
                 k++;
             }
