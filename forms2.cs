@@ -34,8 +34,8 @@ namespace WinFormsApp3
             int n1 = mid - jeden + 1;
             int n2 = dwa - mid;
 
-            int[] Larr = new int[n1]; // Zmieniono nazwę z leftArray na Larr
-            int[] Parr = new int[n2]; // Zmieniono nazwę z rightArray na Parr
+            int[] Larr = new int[n1]; 
+            int[] Parr = new int[n2]; 
 
             for (int i = 0; i < n1; i++)
                 Larr[i] = array[jeden + i];
