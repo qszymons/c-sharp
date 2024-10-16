@@ -1,0 +1,27 @@
+namespace WinFormsApp1
+{
+    internal class Node
+    {
+        public Node next;
+        public Node prev;
+        public int data;
+    }
+    internal class list
+    {
+        public list head;
+        public List tail;
+        public List count;
+    }
+    public void operacje(list)
+    {
+        AddFirst();
+        AddLast();
+        RemoveFirst();
+        RemoveLast();
+        GetInt(int N); // od zera
+    }
+
+    
+
+  
+}
