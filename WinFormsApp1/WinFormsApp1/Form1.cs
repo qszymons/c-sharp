@@ -4,7 +4,7 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
-        private int[] arr; // Pole globalne
+        private int[] arr;
 
         public Form1()
         {
@@ -23,7 +23,7 @@ namespace WinFormsApp1
             string result = string.Join(", ", arr);
             MessageBox.Show(result);
         }
-
+            
         private void BubbleSort(int[] array)
         {
             int a;
@@ -43,7 +43,6 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Uøywanie globalnej tablicy arr
             if (arr == null)
             {
                 MessageBox.Show("Najpierw wprowadü dane w TextBox.");
@@ -70,7 +69,6 @@ namespace WinFormsApp1
 
         public void button3_Click(object sender, EventArgs e)
         {
-            // Uøywanie globalnej tablicy arr
             if (arr == null)
             {
                 MessageBox.Show("Najpierw wprowadü dane w TextBox.");
@@ -190,7 +188,7 @@ namespace WinFormsApp1
             string inputText = textBox1.Text;
             string[] strings = inputText.Split(',');
 
-            arr = new int[strings.Length]; // Inicjalizowanie globalnej tablicy
+            arr = new int[strings.Length]; 
             for (int i = 0; i < strings.Length; i++)
             {
                 if (!int.TryParse(strings[i].Trim(), out arr[i]))
